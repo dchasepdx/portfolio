@@ -23,3 +23,17 @@
 [class*='col-']:last-of-type {
   padding-right: 0;
 }
+
+/*css for placeholder screenshots*/
+.ss {
+  background-color: black;
+  opacity: 0.2;
+  width: 400px;
+  height: 300px;
+}
+
+.ss h2 {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
