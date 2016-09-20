@@ -16,7 +16,7 @@
 
 }
 .nav:hover ul {
-  display: block;
+  display: inline;
 }
 
 .item a {
