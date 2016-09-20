@@ -8,19 +8,19 @@
   padding: 1%;
 
 }
-
+/*coming soon text*/
 .ss h2 {
   color: white;
   text-align: center;
   margin: 0 auto;
 }
-
+/*centers frame div and colors the whole thing*/
 .frame {
   margin: 0 auto;
   max-width: 100%;
   height: 100%;
 }
-
+/*centers header*/
 header {
   max-width: 100%;
   margin: 0 auto;
