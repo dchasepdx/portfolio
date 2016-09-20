@@ -1,0 +1,6 @@
+/*applying border box sizing to everything. Code from CSS tricks*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
