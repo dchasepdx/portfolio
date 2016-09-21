@@ -15,7 +15,7 @@
     <h2>Portfolio</h2>
   </header>
   <nav class="nav clearfix">
-    <img src="burg.png">
+    <img id="menu" src="burg.png">
     <ul>
     <li class="item"><a href="#compass">Coffee Compass</a></li>
     <li class="item"><a href="#project-2">Project 2</a></li>
@@ -26,22 +26,26 @@
   </nav>
 
   <div class="frame">
-    <section id="articles">
+    <section id="projects">
       <article class="template">
-        <header>
+        <section>
           <h1>Title</h1>
+          <img src="">
           <div class="byline">
-            For<p><a href="">Reason for making the site</a></p>
+            <p><a href="">Reason for making the site</a></p>
             published<time pubdate datetime="2000-01-01">Publish Time</time>
           </div>
-        </header>
-        <section class="article-body"></section>
+        </section>
+        <br>
+        <section class="project-body"></section>
       </article>
     </section>
   </div>
 
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="scripts/projectList.js"></script>
+<script src="scripts/Projects.js"></script>
 
 </body>
 </html>

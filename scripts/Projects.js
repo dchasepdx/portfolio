@@ -1,0 +1,39 @@
+//code taken from day 2 jquery and dom lab
+
+var projects = [];
+
+function Project(opts) {
+  this.title = opts.title;
+  this.reason = opts.reason;
+  this.url = opts.url;
+  this.published = opts.published;
+  this.body = opts.body;
+  this.img = opts.img;
+};
+
+Project.prototype.toHtml = function() {
+  var $newProject = $('article.template').clone();
+
+  $newProject.find('section h1').html(this.title);
+  $newProject.find('div.byline  p').text(this.reason);
+  $newProject.find('div.byline  a').attr('href', this.url);
+  $newProject.find('time[pubdate]').attr('title', this.published);
+  $newProject.find('time').html(' about ' + parseInt(Math.round(new Date() - new Date(this.published))/60/60/24/1000) + ' days ago');
+  $newProject.find('.project-body').html(this.body);
+  $newProject.find('img').attr('src', this.img);
+  $newProject.removeAttr('class');
+
+  return $newProject;
+};
+
+projectData.sort(function(curElem, nextElem) {
+  return (new Date(nextElem.published)) - (new Date(curElem.published));
+});
+
+projectData.forEach(function(ele) {
+  projects.push(new Project(ele));
+});
+
+projects.forEach(function(a) {
+  $('#projects').append(a.toHtml());
+});

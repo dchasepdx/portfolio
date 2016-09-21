@@ -30,6 +30,10 @@
   display: table;
   clear: both;
 }
+.template {
+  display: none;
+}
+
 /*media queries for larger screens*/
 @media only screen and (min-width: 640px) {
   /*rules to display nav bar*/
@@ -51,7 +55,7 @@
   .frame {
     max-width: 940px;
   }
-  img {
+  #menu {
     display: none;
   }
 }
