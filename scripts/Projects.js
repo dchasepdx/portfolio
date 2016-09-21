@@ -9,6 +9,7 @@ function Project(opts) {
   this.published = opts.published;
   this.body = opts.body;
   this.img = opts.img;
+  this.anchor = opts.anchor;
 };
 
 Project.prototype.toHtml = function() {
@@ -16,7 +17,7 @@ Project.prototype.toHtml = function() {
 
   $newProject.find('section h1').html(this.title);
   $newProject.find('div.byline  p').text(this.reason);
-  $newProject.find('div.byline  a').attr('href', this.url);
+  $newProject.find('section a').attr({'href':this.url, 'name': this.anchor});
   $newProject.find('time[pubdate]').attr('title', this.published);
   $newProject.find('time').html(' about ' + parseInt(Math.round(new Date() - new Date(this.published))/60/60/24/1000) + ' days ago');
   $newProject.find('.project-body').html(this.body);

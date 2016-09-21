@@ -2,21 +2,14 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
-p {
-  margin: 3.9%;
-  padding: 1%;
-}
+
 
 h1 {
   padding: 4.9%;
 }
-
-#menu {
-  width: 40px;
-  height: 40px;
+section {
   margin: 3.9%;
   padding: 1%;
-  float: right;
 }
 
 header {
@@ -31,7 +24,4 @@ header h1 {
 header h2 {
   margin: 0;
   padding: 0;
-}
-.frame, .fixed-nav{
-  background-color: #e0e0d1;
 }
