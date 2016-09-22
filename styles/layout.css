@@ -1,19 +1,18 @@
 /*css for placeholder screenshots*/
 .ss {
-  background-color: black;
-  opacity: 0.2;
+
   width: 400px;
   height: 300px;
   margin: 3.9%;
   padding: 1%;
 
 }
-/*coming soon text*/
+/*coming soon text
 .ss h2 {
   color: white;
   text-align: center;
   margin: 0 auto;
-}
+}*/
 /*centers frame div and colors the whole thing*/
 .frame {
   margin: 0 auto;
@@ -25,4 +24,16 @@ header {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+#menu {
+  width: 40px;
+  height: 40px;
+  margin: 3.9%;
+  padding: 1%;
+  float: right;
+}
+
+.frame, .fixed-nav{
+  background-color: #e0e0d1;
 }
