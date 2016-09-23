@@ -14,7 +14,8 @@ nav ul{
   display: none;
   list-style-type: none;
   text-align: center;
-
+  margin: 0 auto;
+  padding: 0;
 }
 
 nav ul li {
