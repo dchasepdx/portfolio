@@ -4,7 +4,7 @@ var projectViews = {};
 
 projectViews.aboutOrProjects = function () {
 
-  $('nav ul li:lt(2)').on('click', function(){
+  $('nav').on('click', 'ul li:lt(2)',function(){
     $('#about').hide();
     $('#projects').hide();
     var $text = $(this).text().toLowerCase();
