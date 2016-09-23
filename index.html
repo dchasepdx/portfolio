@@ -3,11 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendors/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/module.css">
-  <link rel="stylesheet" href="vendors/normalize.css">
+
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script id="project-template" type="text/x-handlebars-template">
+    <article>
+      <section>
+        <h1>{{title}}</h1>
+        <a href=""><img class="ss" src="{{img}}"></a>
+        <div class="byline">
+          <h2>{{Reason}}</h2>
+          {{publishStatus}}
+        </div>
+      </section>
+      <br>
+      <section class="project-body">{{body}}</section>
+    </article>
+
+  </script>
 </head>
 <body>
   <header>
@@ -29,18 +45,6 @@
 
   <div class="frame">
     <section id="projects">
-      <article class="template">
-        <section>
-          <h1>Title</h1>
-          <a href=""><img class="ss" src=""></a>
-          <div class="byline">
-            <h2>Reason for making the site</h2>
-            published<time pubdate datetime="2000-01-01">Publish Time</time>
-          </div>
-        </section>
-        <br>
-        <section class="project-body"></section>
-      </article>
     </section>
     <section id="about">
       <p>My name is David Chase. I started to learn coding in January of 2015. I was doing self study until September 2016 when I enrolled in Codefellows with the aim of becomming a web developer. My background is not in tech or coding, but mostly coffee. I've been working in coffee on the wholesale side of things for 5 years, and intermittently, have been a barista. Some of my other interests are <ul>
@@ -54,6 +58,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
 <script src="scripts/projectList.js"></script>
 <script src="scripts/Projects.js"></script>
 <script src="scripts/projectView.js"></script>

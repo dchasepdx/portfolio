@@ -1,18 +1,13 @@
 /*css for placeholder screenshots*/
 .ss {
 
-  width: 600px;
-  height: 500px;
+  width: 76.7%;
+  height: 65.2%;
   margin: 3.9%;
   padding: 1%;
 
 }
-/*coming soon text
-.ss h2 {
-  color: white;
-  text-align: center;
-  margin: 0 auto;
-}*/
+
 /*centers frame div and colors the whole thing*/
 .frame {
   margin: 0 auto;
@@ -34,6 +29,10 @@ header {
   float: right;
 }
 
-.frame, .fixed-nav{
+.frame, nav{
   background-color: #e0e0d1;
+}
+
+#projects {
+  margin-top: 0;
 }
