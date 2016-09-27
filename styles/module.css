@@ -60,11 +60,19 @@ nav:hover ul {
     border-bottom: none;
 
   }
-
+  .frame, nav {
+    background-color: rgba(224,224,209,0.9);
+  }
   nav {
     max-width: 940px;
     margin: 0 auto;
   }
+
+  p {
+    font-size: 24px;
+    text-align: left;
+  }
+
   /*rules to limit and center main content*/
   .frame {
     max-width: 940px;

@@ -27,7 +27,7 @@ Project.prototype.toHtml = function() {
 
 
 Project.loadAll = function(data) {
-  
+
   data.sort(function(a,b) {
     return (new Date(b.published)) - (new Date(a.published));
   }).forEach(function(ele) {
@@ -48,7 +48,7 @@ Project.fetchAll = function() {
       localStorage.setItem('projects', text);
       text = JSON.parse(text);
       Project.loadAll(text);
-      ProjectViews.renderIndexPage();
+      projectViews.renderIndexPage();
     }).fail(function(){
       $('#about').prepend('<h1>Sorry, we couldn\'t load the projects');
     });
