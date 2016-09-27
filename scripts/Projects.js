@@ -1,16 +1,9 @@
 
-//code taken from day 2 jquery and dom lab
-
-
 
 function Project(opts) {
-  this.title = opts.title;
-  this.reason = opts.reason;
-  this.url = opts.url;
-  this.published = opts.published;
-  this.body = opts.body;
-  this.img = opts.img;
-  this.anchor = opts.anchor;
+  for (key in opts) {
+    this[key] = opts[key];
+  }
 };
 Project.all = [];
 
@@ -28,10 +21,10 @@ Project.prototype.toHtml = function() {
 
 Project.loadAll = function(data) {
 
-  data.sort(function(a,b) {
+  Project.all = data.sort(function(a,b) {
     return (new Date(b.published)) - (new Date(a.published));
-  }).forEach(function(ele) {
-    Project.all.push(new Project(ele));
+  }).map(function(ele) {
+    return new Project(ele);
   });
 };
 
@@ -54,16 +47,3 @@ Project.fetchAll = function() {
     });
   }
 };
-
-
-// projectData.sort(function(curElem, nextElem) {
-//   return (new Date(nextElem.published)) - (new Date(curElem.published));
-// });
-//
-// projectData.forEach(function(ele) {
-//   projects.push(new Project(ele));
-// });
-//
-// projects.forEach(function(a) {
-//   $('#projects').append(a.toHtml());
-// });

@@ -16,7 +16,7 @@ projectViews.aboutOrProjects = function () {
 projectViews.renderIndexPage = function() {
   Project.all.forEach(function(a){
     $('#projects').append(a.toHtml('#project-template'));
-
+    
   });
   projectViews.aboutOrProjects();
 
