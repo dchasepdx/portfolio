@@ -8,11 +8,17 @@ projectViews.aboutOrProjects = function () {
     $('#about').hide();
     $('#projects').hide();
     var $text = $(this).text().toLowerCase();
-    console.log('#' + $text);
     $('#' + $text).show();
 
   });
 };
 
+projectViews.renderIndexPage = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml('#project-template'));
 
-projectViews.aboutOrProjects();
+  });
+  projectViews.aboutOrProjects();
+
+};
+Project.fetchAll();

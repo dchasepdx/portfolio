@@ -1,8 +1,11 @@
 /*still not understanding SMACSS file structe. selectors aren't organized optimally*/
 body {
   font-family: 'Source Sans Pro', sans-serif;
-}
+  background: url(/media/guitar.jpg) no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
 
+}
 
 h1 {
   padding: 4.9%;
@@ -13,8 +16,9 @@ section {
 }
 
 header {
-  background-color: #3366ff;
   color: white;
+  font-size: 3em;
+  background: rgba(0,0,0,0.2);
 }
 /*removing margin to get rid of white space*/
 header h1 {
@@ -25,6 +29,7 @@ header h2 {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }

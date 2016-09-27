@@ -16,7 +16,7 @@
 }
 /*centers header*/
 header {
-  max-width: 100%;
+  max-width: 940px;
   margin: 0 auto;
   text-align: center;
 }
@@ -30,9 +30,12 @@ header {
 }
 
 .frame, nav{
-  background-color: #e0e0d1;
+  background-color: rgba(224,224,209,1);
+}
+#projects {
+  margin-top: 0;
 }
 
-#projects {
+#about {
   margin-top: 0;
 }
