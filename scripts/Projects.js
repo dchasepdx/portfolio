@@ -28,24 +28,25 @@
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(next) {
     var text;
     if (localStorage.projects) {
       text = localStorage.getItem('projects');
       text = JSON.parse(text);
       Project.loadAll(text);
-      projectViews.renderIndexPage();
+      next();
     } else {
-      $.getJSON('data/projects.json').done(function(data){
-        text = JSON.stringify(data);
-        localStorage.setItem('projects', text);
-        text = JSON.parse(text);
-        Project.loadAll(text);
-        projectViews.renderIndexPage();
-      }).fail(function(){
-        $('#about').prepend('<h1>Sorry, we couldn\'t load the projects');
-      });
+      Project.getAll(next);
     }
+  };
+  Project.getAll = function(next) {
+    $.getJSON('data/projcts.json').done(function(data){
+      text = JSON.stringify(data);
+      localStorage.setItem('projects', text);
+      text = JSON.parse(text);
+      Project.loadAll(text);
+      next();
+    });
   };
   module.Project = Project;
 })(window);

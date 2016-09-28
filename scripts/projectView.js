@@ -22,5 +22,5 @@
 
   };
   module.projectViews = projectViews;
-  Project.fetchAll();
+  Project.fetchAll(projectViews.renderIndexPage);
 })(window);
