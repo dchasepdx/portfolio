@@ -10,7 +10,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
   <script id="project-template" type="text/x-handlebars-template">
-    <article>
+    <article data-category="{{category}}">
       <section>
         <h1>{{title}}</h1>
         <a href="{{url}}"><img class="ss" src="{{img}}"></a>
@@ -47,12 +47,14 @@
     <section id="projects">
     </section>
     <section id="about">
-      <p>My name is David Chase. I started to learn coding in January of 2015. I was doing self study until September 2016 when I enrolled in Codefellows with the aim of becomming a web developer. My background is not in tech or coding, but mostly coffee. I've been working in coffee on the wholesale side of things for 5 years, and intermittently, have been a barista. Some of my other interests are <ul>
-        <li>Soccer</li>
-        <li>Basketball</li>
-        <li>Video games</li>
+      <p>My name is David Chase. I started to learn coding in January of 2015. I was doing self study until September 2016 when I enrolled in Codefellows with the aim of becomming a web developer. My background is not in tech or coding, but mostly coffee. I've been working in coffee on the wholesale side of things for 5 years, and intermittently, have been a barista. Some of my other interests are
         <ul>
+          <li>Soccer</li>
+          <li>Basketball</li>
+          <li>Video games</li>
+      </ul>
         </p>
+        <h2>The total number of words in the project descriptions is: <span id="words"></span></h2>
     </section>
   </div>
 

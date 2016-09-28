@@ -33,3 +33,7 @@ header h2 {
 a {
   text-decoration: none;
 }
+
+p ul li {
+  text-align: left;
+}
