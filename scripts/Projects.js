@@ -40,7 +40,7 @@
     }
   };
   Project.getAll = function(next) {
-    $.getJSON('data/projcts.json').done(function(data){
+    $.getJSON('data/projects.json').done(function(data){
       text = JSON.stringify(data);
       localStorage.setItem('projects', text);
       text = JSON.parse(text);

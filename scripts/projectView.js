@@ -21,6 +21,20 @@
     projectViews.aboutOrProjects();
 
   };
+  projectViews.wordCount = function() {
+    return Project.all.map(function(article) {
+      return article.body.match(/\w+/g).length;
+    }).reduce(function(acc, curr){
+      return acc + curr;
+    });
+  };
+  projectViews.initWordCount = function() {
+    $('#words').text(projectViews.wordCount());
+  };
+
   module.projectViews = projectViews;
   Project.fetchAll(projectViews.renderIndexPage);
+  projectViews.initWordCount();
+
+
 })(window);
