@@ -24,6 +24,9 @@
     </article>
 
   </script>
+  <script id="category-filter-template" type="text/x-handlebars-template">
+    <option value="{{category}}">{{category}}</option>
+  </script>
 </head>
 <body>
   <header>
@@ -44,6 +47,9 @@
   </nav>
 
   <div class="frame">
+    <select id="category-filter">
+      <option value="">-- Filter by Category--</option>
+    </select>
     <section id="projects">
     </section>
     <section id="about">
