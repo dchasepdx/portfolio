@@ -16,8 +16,11 @@
   projectViews.renderIndexPage = function() {
     Project.all.forEach(function(a){
       $('#projects').append(a.toHtml('#project-template'));
-
+      if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
+        $('#category-filter').append(a.toHtml($('#category-filter-template')));
+      };
     });
+
     projectViews.aboutOrProjects();
 
   };
@@ -31,6 +34,7 @@
   projectViews.initWordCount = function() {
     $('#words').text(projectViews.wordCount());
   };
+
 
   module.projectViews = projectViews;
   Project.fetchAll(projectViews.renderIndexPage);

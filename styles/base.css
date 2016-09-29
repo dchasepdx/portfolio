@@ -18,7 +18,7 @@ section {
 header {
   color: white;
   font-size: 3em;
-  background: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.2);
 }
 /*removing margin to get rid of white space*/
 header h1 {
@@ -34,6 +34,6 @@ a {
   text-decoration: none;
 }
 
-p ul li {
+#about ul li {
   text-align: left;
 }
