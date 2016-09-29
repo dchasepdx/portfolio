@@ -42,6 +42,37 @@
 
     });
   };
+  projectViews.wordFrequency = function() {
+  // THIS WORKS, BUT I THINK I CAN CLEAN IT UP BY CHAINING METHODS
+    var words = Project.all[0].body.split(' ');
+    //console.log(words);
+    var uniqueWords =  words.reduce(function(acc, curr) {
+      acc[curr] = 0;
+      return acc;
+    },{});
+    //console.log(uniqueWords);
+    words.forEach(function(w){
+      if (w in uniqueWords) {
+        uniqueWords[w] += 1;
+      //  console.log(w);
+      }
+    });
+  //  console.log(uniqueWords);
+    return uniqueWords;
+
+  };
+
+  projectViews.initWordFrequency = function(wordFrequency) {
+    var highFrequency = [];
+    //console.log(wordFrequency);
+    for (var key in wordFrequency){
+      if (wordFrequency[key] >= 2) {
+        highFrequency.push(key);
+      }
+    }
+
+    console.log(highFrequency);
+  };
 
   projectViews.wordCount = function() {
     return Project.all.map(function(article) {
@@ -58,6 +89,7 @@
   module.projectViews = projectViews;
   Project.fetchAll(projectViews.renderIndexPage);
   projectViews.initWordCount();
+  projectViews.initWordFrequency(projectViews.wordFrequency());
   projectViews.handleCategoryFilter();
 
 
