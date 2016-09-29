@@ -9,6 +9,11 @@
       $('#projects').hide();
       var $text = $(this).text().toLowerCase();
       $('#' + $text).show();
+      if ($text === 'about') {
+        $('#category-filter').hide();
+      } else {
+        $('#category-filter').show();
+      }
 
     });
   };
@@ -31,7 +36,6 @@
       if ($(this).val()) {
         $('article').hide();
         $('article[data-category="'+ $(this).val() + '"]').show();
-        console.log($(this).val());
       } else {
         $('article').show();
       }
