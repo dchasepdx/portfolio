@@ -7,8 +7,8 @@
   };
   Project.all = [];
 
-  Project.prototype.toHtml = function() {
-    var source = $('#project-template').html();
+  Project.prototype.toHtml = function(templateId) {
+    var source = $(templateId).html();
     var template = Handlebars.compile(source);
     this.daysAgo = parseInt((new Date() - new Date(this.published))/60/60/24/1000);
     this.publishStatus = this.published ? 'published ' + this.daysAgo + ' days ago' : '(draft)';

@@ -35,6 +35,7 @@
     $('#words').text(projectViews.wordCount());
   };
 
+
   module.projectViews = projectViews;
   Project.fetchAll(projectViews.renderIndexPage);
   projectViews.initWordCount();
