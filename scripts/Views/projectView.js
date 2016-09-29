@@ -19,11 +19,26 @@
       if($('#category-filter option:contains("'+ a.category + '")').length === 0) {
         $('#category-filter').append(a.toHtml($('#category-filter-template')));
       };
+      $('#about').hide();
     });
 
     projectViews.aboutOrProjects();
 
   };
+
+  projectViews.handleCategoryFilter = function() {
+    $('#category-filter').on('change', function(){
+      if ($(this).val()) {
+        $('article').hide();
+        $('article[data-category="'+ $(this).val() + '"]').show();
+        console.log($(this).val());
+      } else {
+        $('article').show();
+      }
+
+    });
+  };
+
   projectViews.wordCount = function() {
     return Project.all.map(function(article) {
       return article.body.match(/\w+/g).length;
@@ -39,6 +54,7 @@
   module.projectViews = projectViews;
   Project.fetchAll(projectViews.renderIndexPage);
   projectViews.initWordCount();
+  projectViews.handleCategoryFilter();
 
 
 })(window);

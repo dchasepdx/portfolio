@@ -9,7 +9,7 @@
 
 }
 
-nav ul{
+nav ul, nav select{
 
   display: none;
   list-style-type: none;
@@ -22,7 +22,7 @@ nav ul li {
   border-bottom: 1px solid black;
 }
 
-nav:hover ul {
+nav:hover ul, nav:hover select {
   display: block;
   max-width: 100%;
   margin:0 auto;
