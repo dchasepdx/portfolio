@@ -70,7 +70,10 @@
         highFrequency.push(key);
       }
     }
-
+    var mostUsedWords = highFrequency.reduce(function(acc, curr){
+      return acc + ', ' + curr;
+    });
+    $('#most-used-words').append('<span>' + mostUsedWords + '</span>');
     console.log(highFrequency);
   };
 
