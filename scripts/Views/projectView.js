@@ -2,21 +2,21 @@
 (function(module) {
   var projectViews = {};
 
-  projectViews.aboutOrProjects = function () {
-
-    $('nav').on('click', 'ul li:lt(2)',function(){
-      $('#about').hide();
-      $('#projects').hide();
-      var $text = $(this).text().toLowerCase();
-      $('#' + $text).show();
-      if ($text === 'about') {
-        $('#category-filter').hide();
-      } else {
-        $('#category-filter').show();
-      }
-
-    });
-  };
+  // projectViews.aboutOrProjects = function () {
+  //
+  //   $('nav').on('click', 'ul li:lt(2)',function(){
+  //     $('#about').hide();
+  //     $('#projects').hide();
+  //     var $text = $(this).text().toLowerCase();
+  //     $('#' + $text).show();
+  //     if ($text === 'about') {
+  //       $('#category-filter').hide();
+  //     } else {
+  //       $('#category-filter').show();
+  //     }
+  //
+  //   });
+  // };
 
   projectViews.renderIndexPage = function() {
     Project.all.forEach(function(a){
@@ -27,7 +27,7 @@
       $('#about').hide();
     });
 
-    projectViews.aboutOrProjects();
+    // projectViews.aboutOrProjects();
 
   };
 
@@ -45,7 +45,7 @@
 
   projectViews.wordFrequency = function() {
   // THIS WORKS, BUT I THINK I CAN CLEAN IT UP BY CHAINING METHODS
-    var words = []
+    var words = [];
     // Project.all[0].body.split(' ');
     // console.log(words);
     //
@@ -55,6 +55,7 @@
 
     Project.all.forEach(function(item) {
       words.push(item.body.split(' '));
+    
     });
 
     console.log(words);
@@ -64,7 +65,7 @@
       return acc;
     });
 
-    console.log("after concat " + words);
+    console.log('after concat ' + words);
 
 
     var uniqueWords =  words.reduce(function(acc, curr) {
@@ -78,7 +79,7 @@
       //  console.log(w);
       }
     });
-   console.log(uniqueWords);
+    console.log(uniqueWords);
     return uniqueWords;
 
   };
@@ -87,7 +88,7 @@
     var highFrequency = [];
     //console.log(wordFrequency);
     for (var key in wordFrequency){
-      if (wordFrequency[key] >= 6) {
+      if (wordFrequency[key] >= 20) {
         highFrequency.push(key);
       }
     }
