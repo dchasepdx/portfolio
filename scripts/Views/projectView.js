@@ -45,7 +45,7 @@
 
   projectViews.wordFrequency = function() {
   // THIS WORKS, BUT I THINK I CAN CLEAN IT UP BY CHAINING METHODS
-    var words = []
+    var words = [];
     // Project.all[0].body.split(' ');
     // console.log(words);
     //
@@ -64,7 +64,7 @@
       return acc;
     });
 
-    console.log("after concat " + words);
+    console.log('after concat ' + words);
 
 
     var uniqueWords =  words.reduce(function(acc, curr) {
@@ -78,7 +78,7 @@
       //  console.log(w);
       }
     });
-   console.log(uniqueWords);
+    console.log(uniqueWords);
     return uniqueWords;
 
   };
@@ -87,7 +87,7 @@
     var highFrequency = [];
     //console.log(wordFrequency);
     for (var key in wordFrequency){
-      if (wordFrequency[key] >= 6) {
+      if (wordFrequency[key] >= 20) {
         highFrequency.push(key);
       }
     }
