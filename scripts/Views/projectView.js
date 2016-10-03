@@ -2,21 +2,21 @@
 (function(module) {
   var projectViews = {};
 
-  projectViews.aboutOrProjects = function () {
-
-    $('nav').on('click', 'ul li:lt(2)',function(){
-      $('#about').hide();
-      $('#projects').hide();
-      var $text = $(this).text().toLowerCase();
-      $('#' + $text).show();
-      if ($text === 'about') {
-        $('#category-filter').hide();
-      } else {
-        $('#category-filter').show();
-      }
-
-    });
-  };
+  // projectViews.aboutOrProjects = function () {
+  //
+  //   $('nav').on('click', 'ul li:lt(2)',function(){
+  //     $('#about').hide();
+  //     $('#projects').hide();
+  //     var $text = $(this).text().toLowerCase();
+  //     $('#' + $text).show();
+  //     if ($text === 'about') {
+  //       $('#category-filter').hide();
+  //     } else {
+  //       $('#category-filter').show();
+  //     }
+  //
+  //   });
+  // };
 
   projectViews.renderIndexPage = function() {
     Project.all.forEach(function(a){
@@ -27,7 +27,7 @@
       $('#about').hide();
     });
 
-    projectViews.aboutOrProjects();
+    // projectViews.aboutOrProjects();
 
   };
 
@@ -55,6 +55,7 @@
 
     Project.all.forEach(function(item) {
       words.push(item.body.split(' '));
+    
     });
 
     console.log(words);
