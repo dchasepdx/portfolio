@@ -3,7 +3,7 @@ var repos = {};
 repos.allRepos = [];
 
 repos.requestRepos = function(callback) {
-  $.ajax('https://api.github.com/users/dchasepdx/repos', {
+  $.ajax('/github/users/dchasepdx/repos', {
     headers: {
       Authorization: 'token ' + token
     }
