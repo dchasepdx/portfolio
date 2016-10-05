@@ -17,6 +17,7 @@ repos.requestRepos = function(callback) {
 
 repos.withTheAttribute = function(myAttr) {
   return repos.allRepos.filter(function(aRepo){
+    aRepo.created = aRepo.created_at.split('T')[0];
     return aRepo[myAttr];
   });
 };
