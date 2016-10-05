@@ -27,6 +27,14 @@
   <script id="category-filter-template" type="text/x-handlebars-template">
     <option value="{{category}}">{{category}}</option>
   </script>
+  <script id="repo-template" type="text/x-handlebars-template">
+    <li>
+      <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+      <p>Description: {{description}}</p>
+      <p>Created: {{created_at}}</p>
+      <p>Last updated: {{updated_at}}</p>
+    </li>
+  </script>
 </head>
 <body>
   <header>
@@ -53,11 +61,9 @@
     <section id="projects">
     </section>
     <section id="about">
-      <p>My name is David Chase. I started to learn coding in January of 2015. I was doing self study until September 2016 when I enrolled in Codefellows with the aim of becomming a web developer. My background is not in tech or coding, but mostly coffee. I've been working in coffee on the wholesale side of things for 5 years, and intermittently, have been a barista. Some of my other interests are
-        <ul>
-          <li>Soccer</li>
-          <li>Basketball</li>
-          <li>Video games</li>
+      <p>My name is David Chase. I started to learn coding in January of 2015. I was doing self study until September 2016 when I enrolled in Codefellows with the aim of becomming a web developer. My background is not in tech or coding, but mostly coffee. I've been working in coffee on the wholesale side of things for 5 years, and intermittently, have been a barista. Take a look at a few of my projects on Github:
+        <ul id="repos">
+
       </ul>
         </p>
         <!-- <h2>The total number of words in the project descriptions is: <span id="words"></span></h2> -->
@@ -68,12 +74,15 @@
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
-<!-- <script src="scripts/projectList.js"></script> -->
+<script src="/githubToken.js"></script>
 <script src="scripts/Model/Projects.js"></script>
+<script src="scripts/Model/repo.js"></script>
 <script src="scripts/Views/projectView.js"></script>
+<script src="scripts/Views/repoView.js"></script>
 <script src="scripts/Controller/aboutController.js"></script>
 <script src="scripts/Controller/projectController.js"></script>
 <script src="scripts/Controller/routes.js"></script>
+
 
 </body>
 </html>
