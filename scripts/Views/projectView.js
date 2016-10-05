@@ -55,31 +55,31 @@
 
     Project.all.forEach(function(item) {
       words.push(item.body.split(' '));
-    
+
     });
 
-    console.log(words);
+  //  console.log(words);
 
     words = words.reduce(function(acc, curr){
       acc = acc.concat(curr);
       return acc;
     });
 
-    console.log('after concat ' + words);
+    //console.log('after concat ' + words);
 
 
     var uniqueWords =  words.reduce(function(acc, curr) {
       acc[curr] = 0;
       return acc;
     },{});
-    console.log(uniqueWords);
+    //console.log(uniqueWords);
     words.forEach(function(w){
       if (w in uniqueWords) {
         uniqueWords[w] += 1;
       //  console.log(w);
       }
     });
-    console.log(uniqueWords);
+    //console.log(uniqueWords);
     return uniqueWords;
 
   };
@@ -96,7 +96,7 @@
       return acc + ', ' + curr;
     });
     $('#most-used-words').append('<span>' + mostUsedWords + '</span>');
-    console.log(highFrequency);
+    //console.log(highFrequency);
   };
 
   // projectViews.wordCount = function() {
