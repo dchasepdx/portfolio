@@ -4,9 +4,7 @@ repos.allRepos = [];
 
 repos.requestRepos = function(callback) {
   $.ajax('/github/users/dchasepdx/repos', {
-    headers: {
-      Authorization: 'token ' + token
-    }
+    method: 'GET',
   }).done(function(data){
     data.forEach(function(obj){
       repos.allRepos.push(obj);
