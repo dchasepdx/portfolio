@@ -62,7 +62,7 @@
   projectViews.initWordFrequency = function(wordFrequency) {
     var highFrequency = [];
     for (var key in wordFrequency){
-      if (wordFrequency[key] >= 2) {
+      if (wordFrequency[key] >= 4) {
         highFrequency.push(key);
       }
     }
