@@ -12,17 +12,6 @@
 	},
 
   {
-		"title": "Coffee Compass",
-		"reason": "test for codefellows",
-		"url": "https://dchasepdx.github.io/coffee-compass/",
-		"published": "2016-08-08",
-		"body": "David David David David David David David David David David David David David David David David David David David David David David David David David",
-		"img": "media/coffcomp.jpg",
-    "category": "Vanilla JS"
-
-	},
-
-  {
 		"title": "Dnd Equipment",
 		"reason": "To experiement with jQuery and bootstrap",
 		"url": "http://dchasepdx.github.io/dnd-equipment",
